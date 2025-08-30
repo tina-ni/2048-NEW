@@ -54,8 +54,7 @@ public class GameBoard extends JPanel {
                 + "2. Tiles with the same number will merge when they hit.\n"
                 + "3. The goal is to combine tiles until you reach tile 2048.\n"
                 + "4. Keep playing until you get to 2048 or until you can \n" +
-                "no longer move.\n\n"
-                + "thanks for grading :))";
+                "no longer move.\n\n";
 
 
         JOptionPane.showMessageDialog(this, instructions,
