@@ -44,9 +44,18 @@ public class RunTwoZeroFourEight implements Runnable {
             board.repaint();
         });
 
+        // make reset button
+        JButton resetButton = new JButton("Reset");
+        resetButton.addActionListener(e -> {
+            board.reset();          // clears and starts a new game
+            board.repaint();        // redraw the board
+            board.requestFocusInWindow(); // keep arrow keys working
+        });
+        
         // undo button added to bottom (south)
         JPanel controlPanel = new JPanel();
         controlPanel.add(undoButton);
+        controlPanel.add(resetButton);
         frame.add(controlPanel, BorderLayout.SOUTH);
 
         // use key listener
